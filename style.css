@@ -1,0 +1,596 @@
+/* =========================================
+J & S MEYERS PUBLISHING
+BLACK & GOLD DESIGN
+========================================= */
+
+* {
+  box-sizing: border-box;
+  }
+
+html {
+scroll-behavior: smooth;
+}
+
+body {
+margin: 0;
+font-family: Georgia, "Times New Roman", serif;
+background: #080808;
+color: #f4f0e6;
+line-height: 1.7;
+}
+
+/* =========================================
+NAVIGATION
+========================================= */
+
+.navbar {
+position: sticky;
+top: 0;
+z-index: 1000;
+
+```
+display: flex;
+justify-content: space-between;
+align-items: center;
+
+padding: 18px 6%;
+
+background: rgba(8, 8, 8, 0.96);
+border-bottom: 1px solid #9b7a32;
+
+backdrop-filter: blur(10px);
+```
+
+}
+
+.nav-logo {
+color: #d4af57;
+font-size: 22px;
+font-weight: bold;
+letter-spacing: 4px;
+}
+
+.nav-links {
+display: flex;
+gap: 30px;
+}
+
+.nav-links a {
+color: #f4f0e6;
+text-decoration: none;
+font-size: 15px;
+letter-spacing: 1px;
+
+```
+transition: color 0.3s ease;
+```
+
+}
+
+.nav-links a:hover {
+color: #d4af57;
+}
+
+/* =========================================
+HERO
+========================================= */
+
+.hero {
+min-height: 90vh;
+
+```
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+
+text-align: center;
+
+padding: 70px 20px;
+
+background:
+    radial-gradient(
+        circle at center,
+        #1c1c1c 0%,
+        #0c0c0c 45%,
+        #050505 100%
+    );
+```
+
+}
+
+.hero-logo {
+width: min(850px, 92%);
+margin-bottom: 25px;
+
+```
+animation: logoFade 1.2s ease-out;
+```
+
+}
+
+.hero-logo img {
+width: 100%;
+height: auto;
+display: block;
+
+```
+filter:
+    drop-shadow(0 0 20px rgba(212, 175, 87, 0.15));
+```
+
+}
+
+.hero-tagline {
+margin: 10px 0 25px;
+
+```
+color: #d4af57;
+
+font-size: clamp(14px, 2vw, 20px);
+letter-spacing: 6px;
+font-weight: bold;
+```
+
+}
+
+.hero-introduction {
+max-width: 750px;
+
+```
+margin: 0 auto 30px;
+
+color: #d7d1c4;
+
+font-size: 18px;
+```
+
+}
+
+/* =========================================
+BUTTONS
+========================================= */
+
+.gold-button {
+display: inline-block;
+
+```
+padding: 13px 30px;
+
+color: #080808;
+background: linear-gradient(
+    135deg,
+    #e2c46b,
+    #b88a2e
+);
+
+border: 1px solid #e2c46b;
+border-radius: 3px;
+
+text-decoration: none;
+
+font-family: Georgia, "Times New Roman", serif;
+font-weight: bold;
+letter-spacing: 1px;
+
+box-shadow:
+    0 5px 20px rgba(0, 0, 0, 0.4);
+
+transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease,
+    filter 0.3s ease;
+```
+
+}
+
+.gold-button:hover {
+transform: translateY(-3px);
+
+```
+box-shadow:
+    0 10px 30px rgba(212, 175, 87, 0.25);
+
+filter: brightness(1.08);
+```
+
+}
+
+/* =========================================
+GENERAL SECTIONS
+========================================= */
+
+.section {
+padding: 100px 6%;
+background: #0b0b0b;
+}
+
+.dark-section {
+padding: 100px 6%;
+background:
+linear-gradient(
+135deg,
+#111111,
+#080808
+);
+
+```
+border-top: 1px solid #2b2414;
+border-bottom: 1px solid #2b2414;
+```
+
+}
+
+.section-heading {
+max-width: 850px;
+margin: 0 auto 60px;
+
+```
+text-align: center;
+```
+
+}
+
+.section-label {
+margin-bottom: 10px;
+
+```
+color: #d4af57;
+
+font-size: 13px;
+font-weight: bold;
+letter-spacing: 4px;
+```
+
+}
+
+.section-heading h2 {
+margin: 0;
+
+```
+color: #f4f0e6;
+
+font-size: clamp(36px, 5vw, 58px);
+font-weight: normal;
+```
+
+}
+
+.section-heading > p:last-child {
+color: #aaa399;
+}
+
+/* =========================================
+GOLD DIVIDER
+========================================= */
+
+.gold-line {
+width: 100px;
+height: 2px;
+
+```
+margin: 25px auto;
+
+background: linear-gradient(
+    to right,
+    transparent,
+    #d4af57,
+    transparent
+);
+```
+
+}
+
+/* =========================================
+BOOKS
+========================================= */
+
+.books-grid {
+max-width: 1200px;
+margin: auto;
+
+```
+display: grid;
+grid-template-columns:
+    repeat(auto-fit, minmax(260px, 1fr));
+
+gap: 35px;
+```
+
+}
+
+.book-card {
+overflow: hidden;
+
+```
+background:
+    linear-gradient(
+        145deg,
+        #181818,
+        #0d0d0d
+    );
+
+border: 1px solid #3a301d;
+border-radius: 6px;
+
+box-shadow:
+    0 10px 35px rgba(0, 0, 0, 0.45);
+
+transition:
+    transform 0.35s ease,
+    border-color 0.35s ease,
+    box-shadow 0.35s ease;
+```
+
+}
+
+.book-card:hover {
+transform: translateY(-8px);
+
+```
+border-color: #c9a24a;
+
+box-shadow:
+    0 18px 45px rgba(212, 175, 87, 0.12);
+```
+
+}
+
+.book-placeholder {
+min-height: 360px;
+
+```
+display: flex;
+align-items: center;
+justify-content: center;
+
+background:
+    linear-gradient(
+        135deg,
+        #151515,
+        #080808
+    );
+
+border-bottom: 1px solid #3a301d;
+
+color: #8f7a4a;
+
+letter-spacing: 3px;
+font-size: 13px;
+```
+
+}
+
+.book-info {
+padding: 30px;
+text-align: center;
+}
+
+.book-info h3 {
+margin-top: 0;
+
+```
+color: #d4af57;
+
+font-size: 25px;
+```
+
+}
+
+.book-subtitle {
+color: #bbb5a9;
+font-size: 15px;
+}
+
+.book-button {
+display: inline-block;
+
+```
+margin-top: 15px;
+padding: 9px 20px;
+
+color: #d4af57;
+
+border: 1px solid #9b7a32;
+border-radius: 3px;
+
+text-decoration: none;
+
+transition:
+    background 0.3s ease,
+    color 0.3s ease;
+```
+
+}
+
+.book-button:hover {
+color: #080808;
+background: #d4af57;
+}
+
+/* =========================================
+MISSION
+========================================= */
+
+.mission-text {
+max-width: 850px;
+margin: auto;
+
+```
+text-align: center;
+
+color: #d1cbc0;
+
+font-size: 18px;
+```
+
+}
+
+.mission-text p {
+margin-bottom: 25px;
+}
+
+/* =========================================
+AUTHORS
+========================================= */
+
+.authors-content {
+max-width: 750px;
+margin: auto;
+
+```
+text-align: center;
+
+color: #cbc5b9;
+
+font-size: 18px;
+```
+
+}
+
+/* =========================================
+CONTACT
+========================================= */
+
+.contact-section {
+padding: 100px 20px;
+
+```
+text-align: center;
+
+background: #070707;
+```
+
+}
+
+.contact-section > p {
+max-width: 650px;
+margin: 0 auto 30px;
+
+```
+color: #bbb5a9;
+```
+
+}
+
+/* =========================================
+FOOTER
+========================================= */
+
+footer {
+padding: 60px 20px;
+
+```
+text-align: center;
+
+background: #030303;
+
+border-top: 1px solid #9b7a32;
+```
+
+}
+
+.footer-logo {
+width: min(300px, 75%);
+margin-bottom: 20px;
+
+```
+opacity: 0.9;
+```
+
+}
+
+footer p {
+margin: 8px 0;
+
+```
+color: #d4af57;
+
+letter-spacing: 3px;
+```
+
+}
+
+.footer-tagline {
+font-size: 11px;
+}
+
+.copyright {
+margin-top: 25px;
+
+```
+color: #777 !important;
+
+font-size: 12px;
+
+letter-spacing: 1px !important;
+```
+
+}
+
+/* =========================================
+ANIMATION
+========================================= */
+
+@keyframes logoFade {
+
+```
+from {
+    opacity: 0;
+    transform: translateY(20px) scale(0.98);
+}
+
+to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+}
+```
+
+}
+
+/* =========================================
+MOBILE
+========================================= */
+
+@media (max-width: 700px) {
+
+```
+.navbar {
+    flex-direction: column;
+    gap: 15px;
+}
+
+.nav-links {
+    gap: 15px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.nav-logo {
+    font-size: 18px;
+}
+
+.hero {
+    min-height: auto;
+    padding: 50px 15px 70px;
+}
+
+.hero-tagline {
+    letter-spacing: 3px;
+}
+
+.hero-introduction {
+    font-size: 16px;
+}
+
+.section,
+.dark-section {
+    padding: 70px 20px;
+}
+
+.book-placeholder {
+    min-height: 300px;
+}
+```
+
+}
